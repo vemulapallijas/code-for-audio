@@ -1,0 +1,16 @@
+from playsound import playsound
+from threading import *
+from time import sleep
+class Record1(Thread):
+    def run(self):
+        playsound("C:\\Users\\Jaswanth\\record1.wav")
+        sleep(6)
+class Record2(Thread):
+    def run(self):
+        playsound("C:\\Users\\Jaswanth\\recording2.wav")
+        sleep(6)
+t1 = Record1()
+t2 = Record2()
+t1.start()
+sleep(8)
+t2.start()
